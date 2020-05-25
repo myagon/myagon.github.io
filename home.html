@@ -1,8 +1,154 @@
 <!DOCTYPE html>
-<head>
-		<title>Myagon</title>
-</head>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Myagon - Your personal trainer</title>
+        
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-163768499-1"></script>
+        <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
 
-<body>
-    <h1>Hello World</h1>
-</body>
+        gtag('config', 'UA-163768499-1');
+        </script>
+
+        <link rel="stylesheet" href="/static/css/styles.css">
+        <link rel="stylesheet" href="/static/css/bootstrap.css">
+        <link rel="icon" type="image/ico" href="/static/favicon/MYAGON_icon.ico" size="32x32">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+    <header>
+        <!-- Navbar definition -->
+        
+        <nav class="navbar navbar-expand-lg"> <!-- Denotes at which point the navigation bar expands from vertical to horizontal. medium screens is anything greater than 768px-->
+            <a class="navbar-brand" id="brand-name" href="home.html"><img src="/static/favicon/MYAGON_icon.ico" height="35" width="35"></a> <!-- Website branding (can include logo) -->
+            <button class="navbar-toggler navbar-dark" type="button" data-toggle="collapse" data-target="#main-navigation"> <!--  Denotes the toggle button for the collapsed menu. The piece data-toggle="collapse" defines that this will turn to a hamburger menu -->
+                <span class="navbar-toggler-icon"></span> <!-- this creates the icon users click on to open the menu on smaller screens. -->
+            </button>
+            <div class="collapse navbar-collapse" id="main-navigation">
+                <div class="navbar-nav">
+                    <!-- General info landing page-->
+                    <a class="nav-item nav-link" href="#intro">Product</a>
+                    <a class="nav-item nav-link" href="about.html">About us</a>
+                    <div class="form-row text-center">
+                        <div class="col-12">
+                            <a class="primary-btn-navbar" href="https://docs.google.com/forms/d/e/1FAIpQLSeyQ9nnLCrqpeifSd_fQcBGYjcGVMeEHm2gJLVse9myTKVlmw/viewform?usp=sf_link" target="_blank">Take the survey!</a>             
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header-video">
+            <div class="overlay"></div>
+            <div class="show-desktop-video">
+                <video class="desktop" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    {% load static %}
+                    <source src="/static/img/myagon_stock_video.mp4" type="video/mp4">
+                </video>
+            </div>  
+            <div class="show-mobile-video">
+                <video class="mobile" playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+                    {% load static %}
+                    <source src="static/img/myagon_stock_video_mobile.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="container">
+                <div class="d-flex text-center align-items-center">
+                    <div class="w-100">
+                        {% load static %}
+                        <img src="static/img/MYAGON_v3-08-2.png" id="main-logo">
+                    </div>
+                </div>
+                <div class="d-flex text-center align-items-center">
+                    <div class="w-150">
+                        <p id="header-text">Bringing a personalised coaching experience and self-adapted training plans to athletes at all levels</p>
+                    </div>
+                </div>
+                <div class="d-flex text-center align-items-center">
+                    <div class="w-100 text-center">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyQ9nnLCrqpeifSd_fQcBGYjcGVMeEHm2gJLVse9myTKVlmw/viewform?usp=sf_link" target="_blank" class="btn join-btn-header primary-btn">Take our survey!</a>
+    
+                    </div>
+                </div>
+                <div class="d-flex text-center align-items-center">
+                    <div class="w-100 text-center">
+                        <a href="#intro">
+                            <img class="down-arrow-main" src="/static/img/down-arrow-main.svg">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="intro" name="intro">
+            <h1 id="methodology-title">How does it work?</h1>
+            <p class="default-full-paragraph">Myagon provides adaptive training plans that use your previous workouts and future availability to determine the best workouts to do next so that you achieve your objective. The algorithm will take all your objective metrics such as heart rate, distance, pace, and other subjective metrics such as Rating of Perceiving Exertion (RPE) or feeling after workout, to select the next workout type and its key performance metrics (for example, average Heart Rate) to achieve.</p>
+            <div class="metho-container">
+                <div class="metho-description">
+                    <div class="metho-detail-box">
+                        <div class="flex-item-img"><img class="img-description" src="/static/img/timer.svg"></div>
+                        <div class="flex-item-title">Get your basics right!</div>
+                        <div class="flex-item-description">The first objective is to identify your starting point, in order to bencharm your progress along the way. This is achieved by performing activities like interval runs, long runs, etc.</div>
+                    </div>
+                    <div class="metho-detail-box">
+                        <div class="flex-item-img"><img class="img-description" src="/static/img/route.svg"></div>
+                        <div class="flex-item-title">Select your distance</div>
+                        <div class="flex-item-description">The program is aimed at getting you in your best shape for your “A” race, or your main race of the year. Other races will be taken into account to develop the plan.</div>
+                    </div>
+                    <div class="metho-detail-box">
+                        <div class="flex-item-img"><img class="img-description" src="/static/img/calendar.svg"></div>
+                        <div class="flex-item-title">Follow the plan</div>
+                        <div class="flex-item-description">No training plan is a magic solution, you need to follow it and be accountable. By providing feedback on the sessions, the training plan will automatically adapt.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="metho-button">
+                    <a href="about.html" class="btn join-btn-header secondary-btn-small">Find out more</a>
+            </div>
+        </section>
+
+        <section>
+            <div class="survey-container">
+                <div class="survey-flexbox">
+                    <div class="flexbox-message">
+                        {% load static %}
+                        <p class="message-headline"><img class="img-megaphone" src="/static/img/megaphone.svg">Help us shape Myagon so that it fits YOU!</p>
+                        <p class="message-text">We aim at adapting our solution to our customers, help us understand your needs by taking this quick survey!</p>
+                    </div>
+                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSeyQ9nnLCrqpeifSd_fQcBGYjcGVMeEHm2gJLVse9myTKVlmw/viewform?usp=sf_link" target="_blank" class="btn join-btn-header secondary-btn flexbox-message">Take our survey</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="item-copyright">Myagon Ltd. 2019</div>
+            <div class="social-links">
+                <div class='social-icon'><a href="https://www.facebook.com/myagonUK" target="_blank"><img class='icon-img' src="/static/img/facebook-icon.svg"></a></div>
+                <div class='social-icon'><a href="https://www.instagram.com/myagonuk" target="_blank"><img class='icon-img' src="/static/img/instagram-icon.svg"></a></div>
+                <div class='social-icon'><a href="https://twitter.com/myagonUK" target="_blank"><img class='icon-img' src="/static/img/twitter.png"></a></div>
+                <div class='social-icon'><a href="https://www.linkedin.com/company/myagon?trk=company_home_typeahead_result" target="_blank"><img class='icon-img' src="/static/img/linkedin-icon.svg"></a></div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+    
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/jquery-3.4.1.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    </body>
+
+
+</html>
