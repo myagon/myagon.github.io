@@ -490,3 +490,131 @@ body {
   height: 20px;
   width: 20px;
 }
+
+.section-heading {
+  max-width: 30%;
+  margin: 0 auto 8vh auto;
+  padding-top: 2vh;
+  padding-bottom: 1vh;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: bold;
+  text-align: center;
+  color: var(--dark-blue);
+  border-bottom: 0.2rem solid var(--dark-blue);
+}
+
+@media screen and (max-width: 768px) {
+  .section-heading {
+    max-width: 70%;
+    margin-bottom: 3vh;
+    font-size: 30px;
+
+  }
+}
+/* Mission section */
+.mission {
+  margin: 10vh 25vh 10vh 25vh;
+  background-color: var(--light-grey);
+  padding: 3vh;
+}
+
+.mission-text {
+  color: var(--black);
+}
+
+@media screen and (max-width:768px) {
+  .mission {
+    margin: 5vh 5vh;
+  }
+}
+/* Team section */
+.team {
+    background-color: var(--white);
+}
+
+.team-container {
+  color: #FFF;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.core-team {
+  margin: 2vh;
+  width: 140vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-items: center;
+}
+
+@media screen and (max-width:768px) {
+  .core-team {
+    flex-direction: column;
+    margin-top: 0vh;
+  }
+}
+
+.team-member-box {
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: initial;
+  width: 60vh;
+  padding: 0 5vh 0 5vh;
+}
+
+@media screen and (max-width:768px) {
+  .team-member-box {
+    margin: 3vh 2vh 0 2vh;
+  }
+}
+
+.img-team {
+  height: 220px;
+  width: 200px;
+  text-align: center;
+  border-radius: 50%;
+}
+
+.flex-item-title {
+  margin-top: 3vh;
+  color: var(--blue-button);
+  font-size: 20px;
+}
+
+.flex-item-description {
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  color: var(--black);
+  font-size: 16px;
+}
+
+@media screen and (max-width:768px) {
+  .flex-item-description {
+    margin-left: 2vh;
+    margin-right: 4vh;
+  }  
+}
+
+.team-links-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex: initial;
+}
+
+
+.icon-img-lin {
+  height: 20px;
+  width: 25px;
+}
+
+.icon-img-gmail {
+  height: 20px;
+  widows: 20px;
+}
